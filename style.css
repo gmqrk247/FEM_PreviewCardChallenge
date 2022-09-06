@@ -16,10 +16,11 @@
 
 .container {
 	--max-width: 1110px;
-	--padding: 1rem;
+	--padding: 1.5rem;
 
 	width: min(var(--max-width), 100% - (var(--padding) * 2));
 	margin-inline: auto;
+   
 }
 
 .btn{
@@ -48,16 +49,12 @@
 
 .grid-box{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
     
 }
 
-@media (max-width: 50em){
-    .grid-box{
-        grid-template-columns: 1fr;
-    }
-}
+
 
 .lead{
     text-transform: uppercase;
@@ -78,23 +75,14 @@ body{
     border-radius: var(--border-radius);
     overflow: hidden;
     max-width: 37.5em;
-}
-
-.img-wrapper {
-    background: url('images/image-product-mobile.jpg');
     
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    min-height: 300px;
 }
 
-@media (min-width: 50em){
-    .img-wrapper{
-
-        background: url('images/image-product-desktop.jpg') no-repeat center center / cover;
-    }
+.card img {
+    height: 100%;
 }
+
+
 
 .content-wrapper{
     padding-inline: 1.5rem;
@@ -102,9 +90,7 @@ body{
 }
 
 @media (min-width:50em){
-    .content-wrapper {
-        padding-top: 1.5rem
-    };
+    
 }
 
 .content-wrapper p:not([class]){
@@ -133,4 +119,15 @@ button{
     justify-content: center;
     gap: .8rem;
     width: 100%;
+}
+
+
+@media (min-width: 50em){
+    .grid-box{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content-wrapper {
+        padding-top: 1.5rem
+    };
 }
